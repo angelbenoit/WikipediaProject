@@ -42,3 +42,7 @@ html{
     border-radius: 35px;
     border: 2px solid rgba(0,0,0,0.5);
 }
+#randomArticle{
+    color: black;
+    font-family: "David", "Times New Roman", serif;
+}
