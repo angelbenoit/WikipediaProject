@@ -46,3 +46,12 @@ html{
     color: black;
     font-family: "David", "Times New Roman", serif;
 }
+
+#userInput {
+    visibility: hidden;
+    margin-bottom: 2%;
+}
+
+#search {
+    visibility: hidden;
+}
