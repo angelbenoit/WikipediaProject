@@ -36,6 +36,7 @@ html{
 }
 
 #back2{
+
     visibility: hidden;
     background: ghostwhite;
     text-align: center;
@@ -54,4 +55,11 @@ html{
 
 #search {
     visibility: hidden;
+}
+
+#page {
+    visibility: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    color: gray;
 }

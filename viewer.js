@@ -27,36 +27,48 @@ $("#button").click(function () {
 $("#search").click(function (event) {
     event.preventDefault();
     getWikiId();
-    getURL();
+
 });
 
 function getWikiId() {
     $("#back2").css("visibility", "visible");
+    $("#page").css("visibility", "visible");
+    ;
+
+
+    //gets the link to the json format
     var userInput = $("#userInput").val();
     var link = pageId + userInput + format;
+
+    //the arrays that will hold the pageID and page title and finished array once it goes through getURLArray which contains
+    //the actual link the the wikipedia page
     var arrayOfId = [];
+    var arrayOfTitles = [];
+    var URLarray = [];
     $.getJSON(link, function (result) {
         var pageArrayLength = result.query.allpages.length;
         for (var i = 0; i < pageArrayLength; i++) {
             arrayOfId[i] = result.query.allpages[i].pageid;
+            arrayOfTitles[i] = result.query.allpages[i].title;
         }
-        getURL(arrayOfId);
+        URLarray = getURLArray(arrayOfId);
+
+        for (var j = 0; j < URLarray.length; j++) {
+            $("#page").append("<a href=\"" + URLarray[j] + "\">" + arrayOfTitles[j] + "<\a><br>");
+        }
+
     });
 }
 
-function getURL(list) {
+function getURLArray(list) {
+    //will empty the html prior to adding new data so
+    //it doesn't pile ons
+    $("#page").empty();
+
+    //this array will hold all the URLs with the pageID, which will take user to desired wikipedia page
     var arrayOfURL = [];
     for (var i = 0; i < list.length; i++) {
         arrayOfURL[i] = url + list[i];
     }
-    for (var x = 0; x < arrayOfURL.length; x++) {
-        $("#back2").append(arrayOfURL[x] + "<br>");
-    }
+    return arrayOfURL;
 }
-
-/* todo : get "title" from allpages array from json data and
-       put it in as display in #back2 for when user clicks on it,
-        another tab opens with the url*/
-/*
-    todo: fix the issue  of when user enters a data, it refreshes data when user enters new data 
- */
