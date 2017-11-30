@@ -10,7 +10,7 @@ html{
 #centerPiece{
     text-align: center;
     font-weight: 700;
-    color: black;
+    color: white;
     padding-top: 25%;
     text-shadow: 0 4px 3px rgba(0,0,0,0.4),
     8px 8px 13px rgba(0,0,0,0.1),
@@ -18,7 +18,11 @@ html{
 }
 
 #back1{
-    background: ghostwhite;
+    background: #c7cbc1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgba(255, 0, 0, 0), rgb(193, 203, 201)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right, rgba(255, 0, 0, 0), rgb(141, 147, 144)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right, rgba(255, 0, 0, 0), rgb(102, 104, 101)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(42, 44, 42)); /*Standard*/
     text-align: center;
     border-radius: 35px;
     border: 2px solid rgba(0,0,0,0.5);
@@ -38,19 +42,30 @@ html{
 #back2{
 
     visibility: hidden;
-    background: ghostwhite;
+    background: #c7cbc1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgba(255, 0, 0, 0), rgb(193, 203, 201)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right, rgba(255, 0, 0, 0), rgb(141, 147, 144)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right, rgba(255, 0, 0, 0), rgb(102, 104, 101)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(42, 44, 42)); /*Standard*/
     text-align: center;
     border-radius: 35px;
     border: 2px solid rgba(0,0,0,0.5);
 }
 #randomArticle{
-    color: black;
+    color: white;
     font-family: "David", "Times New Roman", serif;
 }
 
 #userInput {
     visibility: hidden;
     margin-bottom: 2%;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #282927; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgba(255, 0, 0, 0), rgb(77, 81, 80)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right, rgba(255, 0, 0, 0), rgb(144, 150, 147)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right, rgba(255, 0, 0, 0), rgb(190, 194, 188)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(229, 239, 229)); /*Standard*/
 }
 
 #search {
