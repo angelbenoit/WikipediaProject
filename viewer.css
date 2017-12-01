@@ -59,6 +59,9 @@ html{
     color: white;
     font-family: "David", "Times New Roman", serif;
 }
+#randomArticle:hover{
+    color: gray;
+}
 
 #userInput {
     visibility: hidden;
@@ -85,3 +88,13 @@ html{
 
 }
 
+
+#button:hover{
+    background: silver;
+    
+}
+
+#search:hover{
+    background: silver;
+    color: black;
+}
