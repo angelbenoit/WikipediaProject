@@ -33,8 +33,7 @@ $("#search").click(function (event) {
 function getWikiId() {
     $("#back2").css("visibility", "visible");
     $("#page").css("visibility", "visible");
-    ;
-
+    
 
     //gets the link to the json format
     var userInput = $("#userInput").val();

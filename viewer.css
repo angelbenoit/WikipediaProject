@@ -1,5 +1,9 @@
 body{
-    background: url("http://library.castilleja.org/wp-content/uploads/2013/03/wikipedia-logo-.jpg");
+    background: #c7cbc1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgba(255, 0, 0, 0), rgb(193, 203, 201)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right, rgba(255, 0, 0, 0), rgb(141, 147, 144)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right, rgba(255, 0, 0, 0), rgb(102, 104, 101)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(42, 44, 42)); /*Standard*/
     background-size: cover;
     background-position: center;
 }
@@ -59,7 +63,7 @@ html{
 #userInput {
     visibility: hidden;
     margin-bottom: 2%;
-    color: white;
+    color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background: #282927; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left, rgba(255, 0, 0, 0), rgb(77, 81, 80)); /*Safari 5.1-6*/
@@ -77,4 +81,7 @@ html{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 35px;
     color: gray;
+    text-align: center;
+
 }
+
