@@ -33,7 +33,8 @@ $("#search").click(function (event) {
 function getWikiId() {
     $("#back2").css("visibility", "visible");
     $("#page").css("visibility", "visible");
-    
+    var html1 = "<div id='box'><a href=\"";
+    var html2 = "<\a></div><br>";
 
     //gets the link to the json format
     var userInput = $("#userInput").val();
@@ -53,7 +54,8 @@ function getWikiId() {
         URLarray = getURLArray(arrayOfId);
 
         for (var j = 0; j < URLarray.length; j++) {
-            $("#page").append("<a href=\"" + URLarray[j] + "\">" + arrayOfTitles[j] + "<\a><br>");
+            var url = URLarray[j];
+            $("#page").append(html1 + url + "\">" + arrayOfTitles[j] + html2);
         }
 
     });
